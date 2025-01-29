@@ -1,0 +1,636 @@
+---
+description: Syllabus
+permalink: /lectures.html
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML4 meta tags forcing no-caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="icon" href="{{site.baseurl}}/favicon.ico?">
+
+    <title>COMPSCI 682 Neural Networks: A Modern Introduction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-custom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a class="navbar-brand" href="https://www.cics.umass.edu/">COMPSCI682</a>-->
+          <a class="navbar-brand" href="https://www.cics.umass.edu/"><img style="max-height:15px; margin-top: 1px;"
+             src="assets/fig/umasslogo2.png"></a>
+          <!--<a class="navbar-brand" href="#">COMPSCI682</a>-->
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="lectures.html">Lectures</a></li>
+            <li><a href="notes/">Notes</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="policies/">Policies</a></li>
+            <li><a href="projects/">Project</a></li>
+            <li><a href="{{site.baseurl}}/officehours/">Office Hours</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+      <h2>COMPSCI 682 Neural Networks: A Modern Introduction</h2>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Note</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>This is a tentative class outline and is subject to change throughout the semester.</li>
+            <li>Regular lectures will be Tue & Th 1:00PM - 2:15PM, <a href="https://www.umass.edu/energy/map.html">Thompson Hall</a>, Room 106.</li>
+            <li>There will be a few optional discussion sections organized by the TAs on Fridays (shown in green)</li>
+            <li>Slides will be finalized after the lecture and Echo360 recordings accessible via <a href="https://umamherst.instructure.com/courses/24006">Canvas</a>.</li>
+          </ul>
+        </div>
+      </div>
+        <div class="panel panel-default">
+{% assign start = '03-09-2024 10:00:00' | date: '%s' %}
+{% assign delta = 2 | times: 86400 %}
+{% assign release_day = site.time | date: '%s' | plus: delta %}
+{% assign cur = 0 | times: 86400 | plus: start %}
+<table class="table">
+  <tbody>
+    <tr class="active">
+      <th>Event Type</th><th class="footer-col-4">Date</th><th class="footer-col-3">Description</th><th>Course Materials</th>
+    </tr>
+    <tr>
+      <td>Lecture</td> <!-- Lecture 1 -->
+      <td>{{cur | date: "%A, %b %-d"}}</td>
+      <td>Course logistics and overview<br>Historical context</td>
+      <td>
+        {% if release_day >= cur %}
+          <a href="docs/lecture1fall2024.pdf">[slides]</a><br>
+          <a href="notes/python-numpy-tutorial/">[python/numpy tutorial]</a><br>
+	         <a href="{{site.baseurl}}/setup-instructions/">[software setup for assignments]</a><br>
+        {% endif %}
+      </td>
+    </tr>
+    {% assign cur = 2 | times: 86400 | plus: start %}
+    <tr>
+      <td>Lecture</td> <!-- Lecture 2 -->
+      <td>{{ cur | date: "%A, %b %-d"}}</td>
+       <td>Image classification and the data-driven approach
+          <ul>
+            <li>K-nearest neighbor
+            <li>Linear classification
+          </ul>
+         Optimization <ul><li>Loss function I</ul></td>
+      <td>
+        {% if release_day >= cur %}
+          <a href="{{site.baseurl}}/docs/lecture2fall2024.pdf">[slides]</a><br>
+          <a href="notes/classification/">[image classification notes]</a><br>
+	        <a href="notes/linear-classify/">[linear classification notes]</a><br>
+        {% endif %}
+      </td>
+    </tr>
+  {% assign cur = 7 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 3 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <!-- <td>To be announced</td> -->
+
+    <td>Optimization
+      <ul>
+        <li>Loss function II
+        <li>Regularization
+        <li>Gradient computation
+      </ul>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture3fall2024.pdf">[slides]</a><br>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 9 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 4 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Optimization:
+      <ul>
+      <li>Stochastic gradient descent
+      <li>Optimization challenges
+      <li>Momentum, AdaGrad, Adam
+      </ul>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <a href="{{site.baseurl}}/docs/lecture4fall2024.pdf">[slides]</a><br>
+        <a href="notes/optimization-1/">[optimization and sgd notes]</a><br>
+      {% endif %}
+    </td>
+  </tr>
+  <tr class="success">
+    <td>Optional discussion</td>
+    <td>Friday, Sep 13, 11-12pm, CS 142 </td>
+    <td>Python setup, Google collab, Basics of Python and Numpy</td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="https://cvl-umass.github.io/compsci682-fall-2024/notes/python-numpy-tutorial/">[Notes]</a>
+      {% endif %}
+    </td>
+    <td>
+    </td>
+  </tr>
+  {% assign cur = 14 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 5 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+        Learning rate schedules<br>
+        Neural networks<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture5fall2024.pdf">[slides]</a><br>
+        <!--<a href="https://echo360.org/media/412c3612-6abb-4e53-a730-ee63a375686e/public">[lecture recording]</a><br>
+        <a href="notes/optimization-2/">[backprop notes]</a><br>
+        <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf">[Efficient BackProp]</a> (optional)<br>
+	related: <a href="http://colah.github.io/posts/2015-08-Backprop/">[1]</a>, <a href="http://neuralnetworksanddeeplearning.com/chap2.html">[2]</a>, <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">[3]</a> (optional)
+        <a href="{{site.baseurl}}/docs/lecture5fall2023.pdf">[slides]</a><br>
+        handout 1: <a href="{{site.baseurl}}/docs/vecDerivs.pdf">Vector, Matrix, and Tensor Derivatives</a><br>
+        handout 2: <a href="http://cs231n.stanford.edu/handouts/derivatives.pdf">Derivatives, Backpropagation, and Vectorization</a><br>
+	<a href="http://www.nature.com/nature/journal/v521/n7553/full/nature14539.html">Deep Learning [Nature]</a> (optional)-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 16 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 6 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Backpropagation<br>
+      Vector, matrix, and tensor derivatives<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <a href="{{site.baseurl}}/docs/lecture6fall2024.pdf">[slides]</a><br>
+	<a href="notes/optimization-2/">[backprop notes]</a><br>
+	handout 1: <a href="{{site.baseurl}}/docs/vecDerivs.pdf">vector, matrix, and tensor derivatives</a><br>
+        handout 2: <a href="http://cs231n.stanford.edu/handouts/derivatives.pdf">derivatives, backpropagation, and vectorization</a><br>
+	<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf">[efficient backprop]</a> (optional)<br>
+        related: <a href="http://colah.github.io/posts/2015-08-Backprop/">[1]</a>, <a href="http://neuralnetworksanddeeplearning.com/chap2.html">[2]</a>, <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">[3]</a> (optional)
+        <!--<a href="notes/neural-networks-1/">[Neural Nets notes 1]</a><br>
+        tips/tricks:
+        <a href="http://research.microsoft.com/pubs/192769/tricks-2012.pdf">[1]</a>,
+        <a href="http://arxiv.org/pdf/1206.5533v2.pdf">[2]</a> (optional)
+	<br>-->
+      {% endif %}
+    </td>
+  </tr>
+  <tr class="success">
+    <td>Optional discussion</td>
+    <td> Friday, Sep 20, 11-12pm, CS 142 </td>
+    <td>Reviewing the chain rule, Applying the chain rule to vectors</td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="https://docs.google.com/presentation/d/1EEk-iBsHCcxT6BhyCC_TxbCLSZSyqIJRGb4fF3EvXbk/edit#slide=id.p1">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 21 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 7 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+        Training neural networks<br>
+        Activation Functions<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture7fall2024.pdf">[slides]</a><br>
+      <!--<a href="https://docs.google.com/presentation/d/1IdTE9PBfqJjYed5VWdbuf3qR128D6jztTMhQHE_-RC4/edit?usp=sharing">[slides]</a><br>-->
+	<!--<a href="https://echo360.org/media/39d9a67c-00f8-4d5e-9eb3-3525c2b70488/public">[lecture
+	  recording]</a><br>
+	<a href="{{site.baseurl}}/docs/lecture7fall2023.pdf">[slides]</a><br>
+        <a href="notes/neural-networks-2/">[Neural Nets notes 2]</a><br>
+	<a href="https://arxiv.org/abs/1502.03167">[Batch Norm]</a>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 23 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 8 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+        Training neural networks II <br>
+        Weight initialization<br>
+        Batch normalization
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture8fall2024.pdf">[slides]</a><br>
+      <a href="notes/neural-networks-2/">[neural nets notes 2]</a><br>
+      <a href="https://arxiv.org/abs/1502.03167">[batch norm]</a>
+      <!--<a href="https://echo360.org/media/025886f5-b0c0-4550-8245-e5f728872408/public">[lecture recording]</a><br>
+        <a href="{{site.baseurl}}/docs/lecture8fall2023.pdf">[slides]</a><br>
+	<a href="https://arxiv.org/abs/1206.5533">[Bengio 2012]</a> (optional)-->
+      {% endif %}
+    </td>
+  </tr>
+  <tr class="success">
+    <td>Optional discussion</td>
+    <td> Friday, Sep 27, 11-12pm, CS 142 </td>
+    <td>Vector, Matrix, and Tensor Derivatives</td>
+    <td>
+      <a href="https://drive.google.com/file/d/1CI2tVHJlA6FbPy1Vge_Vv1_DuNFnnFhv/view">[slides]</a>
+    </td>
+  </tr>
+  {% assign cur = 28 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 9 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Project I<br>
+      Expectations and timeline<br>
+      Overview of projects by the TAs<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture9fall2024.pdf">[slides 1]</a><br>
+      <a href="https://docs.google.com/presentation/d/1vEMiuKC415nxqdVK2Qtpkw3Z_o6XmHb1Erw6WbZg_ws/edit?usp=sharing">[slides 2]</a><br>
+      <a href="https://docs.google.com/spreadsheets/d/1KwJFP3KwPCpLFVmBHympqBxI6xzxSgA9g6UzWp0ursM/edit?usp=sharing">[project ideas]</a><br>
+      <!--<a href="https://docs.google.com/presentation/d/13BbrWgWZkMC6Sq7ke32_MCNe_GVsn4cwEzmS97Luf5A/edit?usp=sharing">[slides]</a><br>-->
+        <!--<a href="https://docs.google.com/presentation/d/1-SKzIFEO7hvDFnnXFNFwnmlLG7v3R-FkO3YKMfBY0bk/edit?usp=sharing">[slides]</a><br>
+        <a href="notes/neural-networks-3/">[Neural Nets notes 3]</a><br>
+	<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf">LeNet</a> (optional)<br>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 30 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 10 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Project II<br>
+      Work on project proposal in class<br>
+      <!--Training neural networks<br>
+      Ensembles, dropout<br>
+      Convolutional neural neoworks<br> -->
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+    </td>
+  </tr>
+  <tr class="success">
+    <td>Optional discussion</td>
+    <td> Friday, Oct 4, 11-12pm, CS 142 </td>
+    <td>Batch normalization</td>
+    <td>
+       <a href="{{site.baseurl}}/docs/batch_normalization.pdf">[slides]</a><br>
+    </td>
+  </tr>
+  {% assign cur = 35 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Training neural networks III <br>
+      Hyperparameter optimization<br>
+      Model ensembles, dropout<br>
+      Convolutional neural networks<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/lecture10fall2024.pdf">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 37 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>  <!-- Lecture 11 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Guest lecture: <a href="https://xiaolonw.github.io/">Xiaolong Wang</a> (UIUC)<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <!--<a href="https://echo360.org/media/75727aac-c503-42c9-a4f2-fba74f8e449d/public">[lecture recording]</a><br>
+	<a href="{{site.baseurl}}/docs/lecture10fall2023.pdf">[slides]</a>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 42 | times: 86400 | plus: start %}
+  <tr class="active">
+    <td></td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>  <!-- Lecture 12 -->
+    <td>
+      No class, Monday schedule<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <!--<a href="https://echo360.org/media/7280e621-c56f-412c-aa5b-e23db734c1c4/public">[lecture
+      recording]</a><br>
+      <a href="{{site.baseurl}}/docs/lecture11fall2023.pdf">[slides]</a><br>
+        <a href="https://arxiv.org/abs/1512.03385">ResNet</a> (optional)<br>
+	<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf">FCN</a> (optional)<br>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 44 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>  <!-- Lecture 13 -->
+    <td>
+      Convnets for spatial localization I:<br>
+      Object detection<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+	<a href="{{site.baseurl}}/docs/lecture12fall2024.pdf">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 49 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>  <!-- Lecture 14 -->
+    <td>
+      Convnets for spatial localization II:<br>
+      Image segmentation<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+      <a href="{{site.baseurl}}/docs/lecture13fall2024.pdf">[slides]</a>
+    </td>
+  </tr>
+
+  {% assign cur = 51 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Guest Lecture: <a href="https://vision.cs.yale.edu/members/alex-wong.html">Alex Wong</a> (Yale)<br>
+      The know-how of multimodal depth perception
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <!--<a href="https://echo360.org/media/62f665cb-683c-44ed-9cc4-242e00b97845/public">[lecture recording]</a><br>
+        <a href="{{site.baseurl}}/docs/lecture14fall2023.pdf">[slides]</a><br>
+	<a href="notes/understanding-cnn/">[visualization notes]</a><br>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 56 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td> <!-- Lecture 15/16 -->
+    <td>
+      Understanding and visualizing convnets<br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+      <a href="{{site.baseurl}}/docs/lecture14fall2024.pdf">[slides]</a><br>
+      <a href="https://echo360.org/media/62f665cb-683c-44ed-9cc4-242e00b97845/public">[lecture recording, 2023]</a>; this year's version has missing audio<br>
+      <a href="{{site.baseurl}}/notes/understanding-cnn/">[visualization notes]</a><br>
+      </td>
+  </tr>
+  {% assign cur = 58 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Guest lecture: <a href="http://boqinggong.info/">Boqing Gong</a> (Google, BU)<br>
+      From domain adaptation to videoprism
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+      <!--<a href="https://www.cics.umass.edu/event/20231102/mlfl-james-tompkin-brown-university">[talk info]</a>-->
+      </td>
+  </tr>
+  {% assign cur = 63 | times: 86400 | plus: start %}
+  <tr class="active">
+    <td></td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      No class, Election Day <br>
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+      <!--<a href="https://echo360.org/media/addcfeae-5ca7-4432-b784-d214e302bac5/public">[lecture recording]</a><br>
+      <a href="{{site.baseurl}}/docs/presentation_DGM_sajjad.pdf">[slides]</a><br>
+      <a href="{{site.baseurl}}/notes/gan/">[GAN Notes]</a><br> -->
+      </td>
+  </tr>
+  {% assign cur = 65| times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Adversarial examples, Neural texture synthesis and style transfer
+    </td>
+    <td>
+      {% if release_day >= cur %}
+	     <a href="{{site.baseurl}}/docs/lecture15fall2024.pdf">[slides]</a><br>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 70 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Recurrent neural networks
+    </td>
+    <td>
+      <!--<a href="https://echo360.org/media/eb9d4cef-f36a-4328-80ab-8da583265544/public">[lecture recording]</a><br>-->
+      <a href="{{site.baseurl}}/docs/lecture16fall2024.pdf">[slides]</a>
+    </td>
+  </tr>
+  {% assign cur = 72 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Transformers
+    </td>
+    <td>
+      <a href="{{site.baseurl}}/docs/lecture17fall2024.pdf">[slides]</a>
+    </td>
+  </tr>
+  {% assign cur = 77 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>Self-supervised learning</td>
+    <td>
+      <a href="{{site.baseurl}}/docs/lecture18fall2024.pdf">[slides]</a><br>
+    </td>
+  </tr>
+  {% assign cur = 79 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Guest lecture: <a href="https://chensun.me/">Chen Sun</a> (Brown)<br>
+      Title: Grounding deep generative models in the physical world
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 84 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      No regular class, work on projects
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <!--<a href="https://echo360.org/media/f4947db7-2cd1-444a-b2a1-f9825a988474/public">[lecture recording]</a><br>
+	<a href="{{site.baseurl}}/docs/lecture18fall2023.pdf">[slides]</a><br>-->
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 86 | times: 86400 | plus: start %}
+  <tr class="active">
+    <td></td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      No class, Thanksgiving Break
+    </td>
+    <td>
+    </td>
+  </tr>
+  {% assign cur = 91 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Project presentations, Group 1
+    </td>
+    <td>
+      {% if release_day >= cur %}
+        <a href="{{site.baseurl}}/docs/presentations-day1-fall2024.pdf">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 93 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Project presentations, Group 2
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/presentations-day2-fall2024.pdf">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% assign cur = 98 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td>
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Project presentations, Group 3
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      <a href="{{site.baseurl}}/docs/presentations-day3-fall2024.pdf">[slides]</a>
+      {% endif %}
+    </td>
+  </tr>
+
+</tbody></table>
+</div>
+
+    </div><!--/.container-->
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-col-1 column">
+          <ul>
+            <li><a href="https://github.com/cvl-umass/compsci682-fall-2024">
+              <span class="icon github">
+                <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                  c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                  c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                  c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                  C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                  c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                  c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                  c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                  c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+              <span class="username">compsci682-fall-2024</span>
+            </a>
+            </li>
+            <!-- <li>
+              <a href="mailto:compsci682@gmail.com">compsci682@gmail.com</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="footer-col-2 column">
+
+        </div>
+
+        <div class="footer-col-3 column">
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{site.baseurl}}/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{site.baseurl}}/assets/js/offcanvas.js"></script>
+  </body>
+</html>
