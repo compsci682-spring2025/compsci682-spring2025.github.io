@@ -41,4 +41,4 @@ As I said, I don’t enjoy talking about this stuff. But it’s much worse to de
 
 With that out of the way, let’s get back to deep neural networks and having fun!
 
--- Prof. Maji based on a note by Prof. Learned-Miller
+-- Prof. Gan based on a note by Prof. Learned-Miller and Prof. Maji
