@@ -272,7 +272,6 @@ permalink: /lectures.html
     <td>
     Recurrent neural networks
     Transformers
-    Self-supervised learning
     </td>
     <td>
       {% if release_day >= cur %}
@@ -283,11 +282,11 @@ permalink: /lectures.html
   </tr>
   
   {% assign cur = 56 | times: 86400 | plus: start %}
-  <tr>
+  <tr class="danger">
     <td>Lecture</td> <!-- Lecture 9 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-    Self-supervised learning
+    Midterm to be held during regular lecture time 
     </td>
     <td>
       {% if release_day >= cur %}
@@ -302,7 +301,7 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 10 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      TBD
+      Self-Supervised Learning
     </td>
     <td>
       {% if release_day >= cur %}
