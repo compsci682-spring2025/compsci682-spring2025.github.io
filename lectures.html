@@ -183,6 +183,20 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 4 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
+      Guest Lecture:<a href="https://akariasai.github.io/">Akari Asai</a> (UWash)
+    </td>
+    <td>
+      {% if release_day >= cur %}
+      {% endif %}
+    </td>
+  </tr>
+
+
+  {% assign cur = 28 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 4 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
       Training neural networks<br>
       Activation Functions<br>
       Weight initialization<br>
@@ -198,22 +212,21 @@ permalink: /lectures.html
     </td>
   </tr>
 
-
-  <!--<tr class="success">
-    <td>Optional discussion</td>
-    <td>Friday, Sep 13, 11-12pm, CS 142 </td>
-    <td>Python setup, Google collab, Basics of Python and Numpy</td>
+  {% assign cur = 35 | times: 86400 | plus: start %}
+  <tr>
+    <td>Lecture</td> <!-- Lecture 4 -->
+    <td>{{ cur | date: "%A, %b %-d"}}</td>
+    <td>
+      Guest Lecture:<a href="https://people.eecs.berkeley.edu/~nicholas_tomlin/">Nicholas Tomlin</a> (UCBerkeley)
+    </td>
     <td>
       {% if release_day >= cur %}
-      <a href="https://cvl-umass.github.io/compsci682-fall-2024/notes/python-numpy-tutorial/">[Notes]</a>
       {% endif %}
     </td>
-    <td>
-    </td>
-  </tr> -->
+  </tr>
 
 
-  {% assign cur = 28 | times: 86400 | plus: start %}
+  {% assign cur = 42 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 5 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -231,7 +244,7 @@ permalink: /lectures.html
   </tr>
 
 
-  {% assign cur = 35 | times: 86400 | plus: start %}
+  {% assign cur = 49 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 6 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -251,7 +264,7 @@ permalink: /lectures.html
   </tr>
 
 
-  {% assign cur = 42 | times: 86400 | plus: start %}
+  {% assign cur = 56 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 7 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -268,7 +281,7 @@ permalink: /lectures.html
   </tr>
 
 
-  {% assign cur = 49 | times: 86400 | plus: start %}
+  {% assign cur = 63 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 8 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -284,7 +297,7 @@ permalink: /lectures.html
     </td>
   </tr>
   
-  {% assign cur = 56 | times: 86400 | plus: start %}
+<!--  {% assign cur = 70 | times: 86400 | plus: start %}
   <tr class="danger">
     <td>Lecture</td> <!-- Lecture 9 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -297,9 +310,9 @@ permalink: /lectures.html
       
       {% endif %}
     </td>
-  </tr>
+  </tr> -->
   
-  {% assign cur = 63 | times: 86400 | plus: start %}
+  {% assign cur = 70 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 10 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -313,7 +326,7 @@ permalink: /lectures.html
     </td>
   </tr>
   
-  {% assign cur = 70 | times: 86400 | plus: start %}
+  {% assign cur = 77 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 11 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -327,7 +340,7 @@ permalink: /lectures.html
     </td>
   </tr>
   
-  {% assign cur = 77 | times: 86400 | plus: start %}
+  {% assign cur = 84 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 12 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -341,7 +354,7 @@ permalink: /lectures.html
     </td>
   </tr>
   
-  {% assign cur = 84 | times: 86400 | plus: start %}
+  {% assign cur = 91 | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 13 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -355,7 +368,7 @@ permalink: /lectures.html
     </td>
   </tr>
   
-  {% assign cur = 91 | times: 86400 | plus: start %}
+  <!--{% assign cur =  | times: 86400 | plus: start %}
   <tr>
     <td>Lecture</td> <!-- Lecture 14 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
@@ -366,18 +379,6 @@ permalink: /lectures.html
       {% if release_day >= cur %}
         
       {% endif %}
-    </td>
-  </tr>
-
-
-
-
-  <!--<tr class="success">
-    <td>Optional discussion</td>
-    <td> Friday, Sep 27, 11-12pm, CS 142 </td>
-    <td>Vector, Matrix, and Tensor Derivatives</td>
-    <td>
-      <a href="https://drive.google.com/file/d/1CI2tVHJlA6FbPy1Vge_Vv1_DuNFnnFhv/view">[slides]</a>
     </td>
   </tr>-->
 
@@ -403,19 +404,6 @@ permalink: /lectures.html
       {% endif %}
     </td>
   </tr> -->
-
-
-  
-
-  <!--<tr class="success">
-    <td>Optional discussion</td>
-    <td> Friday, Oct 4, 11-12pm, CS 142 </td>
-    <td>Batch normalization</td>
-    <td>
-       <a href="{{site.baseurl}}/docs/batch_normalization.pdf">[slides]</a><br>
-    </td>
-  </tr> -->
-
  
 
 </tbody></table>
