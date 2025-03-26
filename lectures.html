@@ -227,16 +227,13 @@ permalink: /lectures.html
 
 
   {% assign cur = 42 | times: 86400 | plus: start %}
-  <tr>
+  <tr class="success" >
     <td>Lecture</td> <!-- Holiday -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
         Holiday: Spring Break
     </td>
     <td>
-      {% if release_day >= cur %}
-      <a href="{{site.baseurl}}/docs/lecture5fall2025.pdf">[slides]</a><br>
-      {% endif %}
     </td>
   </tr>
 
@@ -272,6 +269,7 @@ permalink: /lectures.html
     <td>
         Understanding and visualizing convnets<br>
         Adversarial examples, Neural texture synthesis and style transfer
+        Midterm Review
     </td>
     <td>
       {% if release_day >= cur %}
@@ -283,12 +281,11 @@ permalink: /lectures.html
 
 
   {% assign cur = 63 | times: 86400 | plus: start %}
-  <tr>
-    <td>Lecture</td> <!-- Lecture 8 -->
+  <tr class="danger">
+    <td>Lecture</td> <!-- Midterm -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-    Recurrent neural networks
-    Transformers
+    Midterm
     </td>
     <td>
       {% if release_day >= cur %}
@@ -303,7 +300,8 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 10 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      Self-Supervised Learning
+      Recurrent neural networks
+      Transformers
     </td>
     <td>
       {% if release_day >= cur %}
@@ -317,7 +315,7 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 11 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      TBD
+      Self-Supervised Learning
     </td>
     <td>
       {% if release_day >= cur %}
