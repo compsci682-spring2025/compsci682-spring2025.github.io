@@ -228,13 +228,10 @@ permalink: /lectures.html
 
   {% assign cur = 42 | times: 86400 | plus: start %}
   <tr>
-    <td>Lecture</td> <!-- Lecture 5 -->
+    <td>Lecture</td> <!-- Holiday -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-        Training neural networks II <br>
-      Hyperparameter optimization<br>
-      Model ensembles, dropout<br>
-      Convolutional neural networks<br>
+        Holiday: Spring Break
     </td>
     <td>
       {% if release_day >= cur %}
@@ -246,19 +243,23 @@ permalink: /lectures.html
 
   {% assign cur = 49 | times: 86400 | plus: start %}
   <tr>
-    <td>Lecture</td> <!-- Lecture 6 -->
+    <td>Lecture</td> <!-- Lecture 5 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
+      Training neural networks II <br>
+      Hyperparameter optimization<br>
+      Model ensembles, dropout<br>
+      Convolutional neural networks<br>
       Convnets for spatial localization<br>
       Object detection<br>
       Image segmentation<br>
     </td>
     <td>
       {% if release_day >= cur %}
-        <a href="{{site.baseurl}}/docs/lecture6fall2025.pdf">[slides]</a><br>
+        <a href="{{site.baseurl}}/docs/Lecture_8.pdf">[slides (Part 1)]</a><br>
+        <a href="{{site.baseurl}}/docs/Lecture_9.pdf">[slides (Part 2)]</a><br>
 	<a href="https://arxiv.org/abs/1512.03385">ResNet</a> (optional)<br>
 	<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf">FCN</a> (optional)<br>
-        
       {% endif %}
     </td>
   </tr>
