@@ -267,14 +267,15 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 7 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-        Understanding and visualizing convnets<br>
-        Adversarial examples, Neural texture synthesis and style transfer<br>
+        Object detection (contd.)<br>
+        Image segmentation (contd.)<br>
         Midterm Review
     </td>
     <td>
       {% if release_day >= cur %}
-      <a href="{{site.baseurl}}/docs/lecture7fall2025.pdf">[slides]</a><br>
-      <a href="{{site.baseurl}}/notes/understanding-cnn/">[visualization notes]</a><br>
+      <a href="{{site.baseurl}}/docs/lecture10.pdf">[slides]</a><br>
+      <a href="{{site.baseurl}}/docs/midterm_study_guide.pdf">[Midterm study guide]</a><br>
+      <a href="{{site.baseurl}}/docs/midterm_review_slides.pdf">[Midterm review slides]</a><br>
       {% endif %}
     </td>
   </tr>
@@ -300,12 +301,12 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 10 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      Recurrent neural networks
-      Transformers
+      Understanding and visualizing convnets<br>
+      Adversarial examples, Neural texture synthesis and style transfer<br>
     </td>
     <td>
       {% if release_day >= cur %}
-        
+        <a href="{{site.baseurl}}/notes/understanding-cnn/">[visualization notes]</a><br>
       {% endif %}
     </td>
   </tr>
@@ -315,7 +316,8 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 11 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      Self-Supervised Learning
+      Recurrent neural networks
+      Transformers
     </td>
     <td>
       {% if release_day >= cur %}
@@ -329,7 +331,7 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 12 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      TBD
+      Self-Supervised Learning
     </td>
     <td>
       {% if release_day >= cur %}
