@@ -4,7 +4,7 @@ mathjax: true
 permalink: /assignments/assignments2025/assignment3/
 ---
 
-**This assignment is due on Monday, May 09 at 11:55pm EST.**
+**This assignment is due on Monday, May 05 at 11:55pm EST.**
 
 Starter code containing Colab notebooks can be downloaded [here](https://github.com/compsci682-spring2025/compsci682-spring2025.github.io/raw/main/assignments/assignments2025/assignment3.zip). Please note that you can finish the homework either using Google Colab or on your local machine.
 
