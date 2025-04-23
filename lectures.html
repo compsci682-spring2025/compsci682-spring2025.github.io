@@ -317,12 +317,13 @@ permalink: /lectures.html
     <td>Lecture</td> <!-- Lecture 11 -->
     <td>{{ cur | date: "%A, %b %-d"}}</td>
     <td>
-      Recurrent neural networks
-      Transformers
+      Recurrent neural networks<br>
+      Transformers<br>
     </td>
     <td>
       {% if release_day >= cur %}
-        
+       <a href="{{site.baseurl}}/docs/lecture_16.pdf">[slides(Part 1)]</a><br>
+        <a href="{{site.baseurl}}/docs/lecture_17.pdf">[slides(Part 2)]</a><br> 
       {% endif %}
     </td>
   </tr>
